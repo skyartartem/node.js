@@ -1,5 +1,7 @@
+CLI додаток
+
+![logo](https://github.com/skyartartem/node.js/raw/main/images/logo.svg)
 Картинки з репозиторія:
-![logo](https://github.com/skyartartem/node.js/main/images/logo.svg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/list.jpg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/getById.jpg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/add.jpg)
@@ -11,5 +13,3 @@
 <img src="https://i.ibb.co/XCM7KKs/getById.jpg" alt="picture of working aplication">
 <img src="https://i.ibb.co/TgzXz56/Add.jpg" alt="picture of working aplication">
 <img src="https://i.ibb.co/FKG5BkV/remove.jpg" alt="picture of working aplication">
-
-https://github.com/skyartartem/node.js/blob/main/images/screens/add.jpg?raw=true
