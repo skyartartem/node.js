@@ -1,5 +1,5 @@
 Картинки з репозиторія:
-
+![logo](https://github.com/skyartartem/node.js/main/images/logo.svg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/list.jpg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/getById.jpg)
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/add.jpg)
