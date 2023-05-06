@@ -26,7 +26,14 @@ async function getContactById(contactId) {
 }
 
 async function removeContact(contactId) {
-  // ...твій код
+  const contacts = await listContacts();
+  const index = contacts.findIndex((item) => item.id === contactId);
+  if (index === -1) {
+    return nul;
+  }
+  const [result] = contacts.splice(index, 1)
+  await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+  return result;
 }
 
 async function addContact(name, email, phone) {
@@ -37,11 +44,21 @@ async function addContact(name, email, phone) {
   return newContact;
 }
 
+async function updateById(id, data) {
+  const contacts = await listContacts();
+  const index =  contacts.findIndex(item=>item.id ===id)
+  if (index === -1) { return nul }
+  contacts[index] = {id, ...data}
+  await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+  return contacts[index];
+}
+
 const contactsOperation = {
   listContacts,
   getContactById,
   removeContact,
   addContact,
+  updateById,
 };
 
 module.exports = contactsOperation;
