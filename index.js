@@ -41,8 +41,8 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-// const actions = process.argv
-// console.log(actions);
+invokeAction(argv);
+// Приклад викликів функціі
 // invokeAction({ action: "list" });
 // invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH" });
 // invokeAction({ action: "remove", id: "TExn-bqJrzIxwur2poPQV" });
@@ -55,4 +55,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 //   phone: "052346825",
 // });
 
-invokeAction(argv);
