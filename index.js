@@ -45,7 +45,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 // console.log(actions);
 // invokeAction({ action: "list" });
 // invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH" });
-// invokeAction({ action: "del", id: "TExn-bqJrzIxwur2poPQV" });
+// invokeAction({ action: "remove", id: "TExn-bqJrzIxwur2poPQV" });
 // invokeAction({ action: "add", name: "Mr. Anderson", email: "mr.anderson@mail.com", phone: "0632814042" });
 // invokeAction({
 //   action: "updateById",
