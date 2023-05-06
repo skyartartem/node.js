@@ -2,7 +2,7 @@ CLI додаток ![logo](https://github.com/skyartartem/node.js/raw/main/image
 Наступні картинки завантажені на поточний репозиторій
 
 Скрін виконання команди: $ node index.js --action="list"
-![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/list.jpg)
+![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/altlist.jpg)
 Скрін виконання команди: $ node index.js --action="get" --id 05olLMgyVQdWRwgKfg5J6"
 ![Приклад виконання програми read](https://github.com/skyartartem/node.js/raw/main/images/screens/getById.jpg)
 Скрін виконання команди: $ node index.js --action="add" --name Mango --email mango@gmail.com --phone 322-22-22
