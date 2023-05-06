@@ -1,3 +1,4 @@
+const { Command } = require("commander");
 const {
   listContacts,
   getContactById,
@@ -5,33 +6,46 @@ const {
   addContact,
   updateById,
 } = require("./contacts");
-// console.log(obj);
 
+const program = new Command();
+program
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
 
-// console.log("First contact", listContacts());
+program.parse(process.argv);
 
-const invokeAction = async ({ action, id, name, email, phone }) => {
-    switch (action) {
-      case "read":
-        const allContacts = await listContacts();
-        return console.log(allContacts);
-      case "getById":
-        const oneContact = await getContactById(id);
-        return console.log(oneContact);
-      case "delById":
-        const delContact = await removeContact(id);
-        return console.log(delContact);
-      case "add":
-        const newContact = await addContact(name, email, phone);
-        return console.log(newContact);
-      case "updateById":
-        const updateContact = await updateById(id, { name, email, phone });
-        return console.log(updateContact);
-    }
-};
-// invokeAction({ action: "read" });
-// invokeAction({ action: "getById", id: "qdggE76Jtbfd9eWJHrssH" });
-invokeAction({ action: "delById", id: "TExn-bqJrzIxwur2poPQV" });
+const argv = program.opts();
+
+async function invokeAction({ action, id, name, email, phone }) {
+  switch (action) {
+    case "list":
+      const allContacts = await listContacts();
+      return console.log(allContacts);
+    case "get":
+      const oneContact = await getContactById(id);
+      return console.log(oneContact);
+    case "remove":
+      const delContact = await removeContact(id);
+      return console.log(delContact);
+    case "add":
+      const newContact = await addContact(name, email, phone);
+      return console.log(newContact);
+    case "updateById":
+      const updateContact = await updateById(id, { name, email, phone });
+      return console.log(updateContact);
+    default:
+      console.warn("\x1B[31m Unknown action type!");
+  }
+}
+
+// const actions = process.argv
+// console.log(actions);
+// invokeAction({ action: "list" });
+// invokeAction({ action: "get", id: "qdggE76Jtbfd9eWJHrssH" });
+// invokeAction({ action: "del", id: "TExn-bqJrzIxwur2poPQV" });
 // invokeAction({ action: "add", name: "Mr. Anderson", email: "mr.anderson@mail.com", phone: "0632814042" });
 // invokeAction({
 //   action: "updateById",
@@ -40,3 +54,5 @@ invokeAction({ action: "delById", id: "TExn-bqJrzIxwur2poPQV" });
 //   email: "mr.anderson@mail.com",
 //   phone: "052346825",
 // });
+
+invokeAction(argv);
