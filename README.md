@@ -1,9 +1,9 @@
 Картинки з репозиторія:
 
-![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/list.jpg)
-![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/getById.jpg)
-![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/add.jpg)
-![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/remove.jpg)
+![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/list.jpg)
+![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/getById.jpg)
+![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/add.jpg)
+![Приклад виконання програми read](https://github.com/skyartartem/node.js/main/images/screens/remove.jpg)
 
 Зовнішній сервіс завантаження картинок
 
